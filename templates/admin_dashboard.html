@@ -4,9 +4,14 @@
 
 <h2>Admin Dashboard</h2>
 
+<a href="/delete_timetable"
+onclick="return confirm('Are you sure you want to delete the entire timetable?')">
+<button class="delete-btn">Delete Previous Timetable</button>
+</a>
+<br><br>
 <form method="POST" enctype="multipart/form-data">
 
-<input type="file" name="file">
+<input type="file" name="file" accept=".xlsx,.xls,.csv">
 
 <button>Upload Excel</button>
 

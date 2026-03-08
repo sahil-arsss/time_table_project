@@ -108,3 +108,16 @@ font-weight:bold;
 .card:hover{
 background:#ecf0f1;
 }
+
+.delete-btn{
+background:#e74c3c;
+color:white;
+padding:10px 15px;
+border:none;
+cursor:pointer;
+border-radius:5px;
+}
+
+.delete-btn:hover{
+background:#c0392b;
+}

@@ -52,6 +52,9 @@ def admin():
 
         file = request.files["file"]
 
+        if file.filename == "":
+            return "No file selected"
+
         path = os.path.join("uploads", file.filename)
 
         file.save(path)
@@ -61,6 +64,20 @@ def admin():
     data = Timetable.query.all()
 
     return render_template("admin_dashboard.html", data=data)
+
+@app.route("/delete_timetable")
+@login_required
+def delete_timetable():
+
+    if current_user.role != "admin":
+        return "Unauthorized"
+
+    Timetable.query.delete()
+
+    db.session.commit()
+
+    return redirect("/admin")
+
 
 
 @app.route("/hod")
