@@ -1,0 +1,34 @@
+    <h2>My Subject</h2>
+
+<table border="1">
+
+<tr>
+
+<th>Room</th>
+<th>Day</th>
+<th>Period</th>
+<th>Subject</th>
+<th>Professor</th>
+<th>Edit</th>
+
+</tr>
+
+{% for d in data %}
+
+<tr>
+
+<td>{{d.room}}</td>
+<td>{{d.day}}</td>
+<td>{{d.period}}</td>
+<td>{{d.subject}}</td>
+<td>{{d.professor}}</td>
+
+<td>
+<a href="/edit/{{d.id}}">Edit</a>
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>

@@ -1,0 +1,35 @@
+<h2>Upload Excel</h2>
+
+<form method="POST" enctype="multipart/form-data">
+
+<input type="file" name="file">
+
+<button>Upload</button>
+
+</form>
+
+<h3>Uploaded Timetable</h3>
+
+<table border="1">
+
+<tr>
+<th>Room</th>
+<th>Day</th>
+<th>Period</th>
+<th>Subject</th>
+<th>Professor</th>
+</tr>
+
+{% for d in data %}
+
+<tr>
+<td>{{d.room}}</td>
+<td>{{d.day}}</td>
+<td>{{d.period}}</td>
+<td>{{d.subject}}</td>
+<td>{{d.professor}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
