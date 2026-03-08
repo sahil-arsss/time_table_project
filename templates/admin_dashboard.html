@@ -1,21 +1,26 @@
-<h2>Upload Excel</h2>
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Admin Dashboard</h2>
 
 <form method="POST" enctype="multipart/form-data">
 
 <input type="file" name="file">
 
-<button>Upload</button>
+<button>Upload Excel</button>
 
 </form>
 
 <h3>Uploaded Timetable</h3>
 
-<table border="1">
+<table>
 
 <tr>
 <th>Room</th>
 <th>Day</th>
 <th>Period</th>
+<th>Department</th>
 <th>Subject</th>
 <th>Professor</th>
 </tr>
@@ -23,13 +28,18 @@
 {% for d in data %}
 
 <tr>
+
 <td>{{d.room}}</td>
 <td>{{d.day}}</td>
 <td>{{d.period}}</td>
+<td>{{d.department}}</td>
 <td>{{d.subject}}</td>
 <td>{{d.professor}}</td>
+
 </tr>
 
 {% endfor %}
 
 </table>
+
+{% endblock %}

@@ -1,38 +1,110 @@
 body{
-font-family: Arial;
-margin:40px;
+font-family: Arial, sans-serif;
+margin:0;
+background:#f4f6f9;
 }
 
+/* Navbar */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#2c3e50;
+color:white;
+padding:15px 30px;
+}
+
+.logo{
+margin:0;
+}
+
+.menu a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.menu a:hover{
+color:#1abc9c;
+}
+
+.logout{
+background:#e74c3c;
+padding:6px 10px;
+border-radius:4px;
+}
+
+/* Container */
+
+.container{
+padding:30px;
+}
+
+/* Tables */
+
 table{
-border-collapse: collapse;
 width:100%;
+border-collapse:collapse;
+background:white;
 }
 
 th{
-background:#2c3e50;
+background:#34495e;
 color:white;
 padding:10px;
 }
 
 td{
-border:1px solid #ccc;
-vertical-align:top;
+border:1px solid #ddd;
 padding:8px;
+text-align:center;
 }
 
-input{
-width:90%;
-margin-bottom:4px;
+/* Login */
+
+.login-box{
+width:300px;
+margin:100px auto;
+background:white;
+padding:30px;
+border-radius:8px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
-button{
+.login-box input{
+width:100%;
+padding:8px;
+margin-bottom:10px;
+}
+
+.login-box button{
+width:100%;
+padding:10px;
 background:#3498db;
 color:white;
 border:none;
-padding:5px 10px;
-cursor:pointer;
 }
 
-button:hover{
-background:#2980b9;
+/* Cards */
+
+.card-container{
+display:flex;
+gap:20px;
+margin-top:20px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:8px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+text-decoration:none;
+color:black;
+font-weight:bold;
+}
+
+.card:hover{
+background:#ecf0f1;
 }
