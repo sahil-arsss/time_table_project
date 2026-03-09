@@ -21,10 +21,11 @@ def parse_excel(filepath):
 
         periods = df.columns[1:]
 
-        for i in range(1, len(df)):
+        for i in range(len(df)):
 
             day = df.iloc[i, 0]
-
+            if str(day).lower() == "time":
+             continue
             for j, period in enumerate(periods):
 
                 dept = df.iloc[i, j+1]
@@ -56,9 +57,13 @@ def parse_excel(filepath):
 
             periods = df.columns[1:]
 
-            for i in range(1, len(df)):
+            for i in range(len(df)):
 
                 day = df.iloc[i, 0]
+
+                # skip the time row
+                if str(day).lower() == "time":
+                    continue
 
                 for j, period in enumerate(periods):
 
@@ -68,7 +73,7 @@ def parse_excel(filepath):
                         continue
 
                     entry = Timetable(
-                        room=sheet,   # room name from sheet
+                        room=sheet,
                         day=day,
                         period=period,
                         department=str(dept),
